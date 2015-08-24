@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('contact', 
+  ['as' => 'contact', 'uses' => 'ContactUsController@create']);
+Route::post('contact', 
+  ['as' => 'contact_store', 'uses' => 'ContactUsController@store']);
